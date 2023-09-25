@@ -1,0 +1,165 @@
+{
+    "ac_kwargs":	{
+        "hidden_sizes":	[
+            256,
+            256
+        ]
+    },
+    "act_noise":	0.1,
+    "actor_critic":	"MLPActorCritic",
+    "batch_size":	100,
+    "env_fn":	{
+        "<KukaReachEnv instance>":	{
+            "action_space":	{
+                "Box(3,)":	{
+                    "bounded_above":	"[ True  True  True]",
+                    "bounded_below":	"[ True  True  True]",
+                    "dtype":	"float32",
+                    "high":	"[0.4 0.4 0.3]",
+                    "low":	"[-0.4 -0.4 -0.6]",
+                    "np_random":	"RandomState(MT19937)",
+                    "shape":	[
+                        3
+                    ]
+                }
+            },
+            "init_joint_positions":	[
+                0.006418,
+                0.413184,
+                -0.011401,
+                -1.589317,
+                0.005379,
+                1.137684,
+                -0.006539
+            ],
+            "is_good_view":	false,
+            "is_render":	false,
+            "joint_damping":	[
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05,
+                1e-05
+            ],
+            "joint_ranges":	[
+                5.8,
+                4,
+                5.8,
+                4,
+                5.8,
+                4,
+                6
+            ],
+            "kuka_id":	1,
+            "lower_limits":	[
+                -0.967,
+                -2,
+                -2.96,
+                0.19,
+                -2.96,
+                -2.09,
+                -3.05
+            ],
+            "np_random":	"RandomState(MT19937)",
+            "num_joints":	7,
+            "object_id":	3,
+            "object_pos":	[
+                0.2150379316919514,
+                0.15676544849880342,
+                0.00982638888888889
+            ],
+            "observation_space":	{
+                "Box(3,)":	{
+                    "bounded_above":	"[ True  True  True]",
+                    "bounded_below":	"[ True  True  True]",
+                    "dtype":	"float32",
+                    "high":	"[0.7  0.3  0.55]",
+                    "low":	"[ 0.2 -0.3  0. ]",
+                    "np_random":	"RandomState(MT19937)",
+                    "shape":	[
+                        3
+                    ]
+                }
+            },
+            "orientation":	[
+                0.7071067811865476,
+                -0.7071067811865476,
+                4.329780281177467e-17,
+                4.329780281177467e-17
+            ],
+            "rest_poses":	[
+                0,
+                0,
+                0,
+                1.5707963267948966,
+                0,
+                -1.0367255756846319,
+                0
+            ],
+            "robot_pos_obs":	[
+                0.5320540070533752,
+                -0.0011213874677196145,
+                0.4962984025478363
+            ],
+            "step_counter":	0,
+            "terminated":	false,
+            "upper_limits":	[
+                0.967,
+                2,
+                2.96,
+                2.29,
+                2.96,
+                2.09,
+                3.05
+            ],
+            "urdf_root_path":	"E:\\anaconda3\\envs\\spinningup\\lib\\site-packages\\pybullet_data",
+            "x_high_action":	0.4,
+            "x_high_obs":	0.7,
+            "x_low_action":	-0.4,
+            "x_low_obs":	0.2,
+            "y_high_action":	0.4,
+            "y_high_obs":	0.3,
+            "y_low_action":	-0.4,
+            "y_low_obs":	-0.3,
+            "z_high_action":	0.3,
+            "z_high_obs":	0.55,
+            "z_low_action":	-0.6,
+            "z_low_obs":	0
+        }
+    },
+    "epochs":	50,
+    "exp_name":	"sac",
+    "gamma":	0.99,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x000001DD39501388>":	{
+            "epoch_dict":	{},
+            "exp_name":	"sac",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"../logs\\sac\\sac_s0",
+            "output_file":	{
+                "<_io.TextIOWrapper name='../logs\\\\sac\\\\sac_s0\\\\progress.txt' mode='w' encoding='cp936'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"sac",
+        "output_dir":	"../logs\\sac\\sac_s0"
+    },
+    "lr":	0.001,
+    "max_ep_len":	1000,
+    "num_test_episodes":	10,
+    "polyak":	0.995,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	10000,
+    "steps_per_epoch":	4000,
+    "update_after":	1000,
+    "update_every":	50
+}
